@@ -22,7 +22,7 @@ import com.portafolio.ignag.Security.Controller.Mensaje;
 import com.portafolio.ignag.Service.SProyectos;
 
 @RestController
-@RequestMapping("proyect")
+@RequestMapping("proyectos")
 @CrossOrigin(origins = "http://localhost:4200")
 public class CProyectos {
     @Autowired

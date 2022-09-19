@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.RestController;
 import com.portafolio.ignag.Entity.Persona;
 import com.portafolio.ignag.Interface.IPersonaService;
+import com.portafolio.ignag.Dto.dtoPersona;
 
 
 
@@ -46,17 +47,14 @@ public class PersonaController {
    
     @PutMapping ("/personas/editar/{id}")
     public Persona editPersona(@PathVariable Long id,
-                                @RequestParam("nombre") String nuevoNombre,
-                                @RequestParam("apellido") String nuevoApellido,
-                                @RequestParam("about") String nuevoAbout,
-                                @RequestParam("img") String nuevoImg) {
+    @RequestBody dtoPersona personaDto) {
             
             Persona persona = ipersonaService.findPersona(id);
 
-            persona.setNombre(nuevoNombre);
-            persona.setApellido(nuevoApellido);
-            persona.setImg(nuevoImg);
-            persona.setAbout(nuevoAbout);
+            persona.setNombre(personaDto.getNombre());
+            persona.setApellido(personaDto.getApellido());
+            persona.setImg(personaDto.getImg());
+            persona.setAbout(personaDto.getAbout());
 
 
             ipersonaService.savePersona(persona);

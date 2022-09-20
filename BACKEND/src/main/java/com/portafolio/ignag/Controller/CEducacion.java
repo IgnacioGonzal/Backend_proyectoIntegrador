@@ -23,7 +23,7 @@ import com.portafolio.ignag.Service.Seducacion;
 
 @RestController
 @RequestMapping("/educacion")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://frontendignag.web.app")
 public class CEducacion {
     @Autowired
     Seducacion sEducacion;

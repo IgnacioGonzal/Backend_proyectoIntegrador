@@ -23,7 +23,7 @@ import com.portafolio.ignag.Service.SSkills;
 
 @RestController
 @RequestMapping("/skills")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://frontendignag.web.app")
 
 public class CSkills {
     @Autowired

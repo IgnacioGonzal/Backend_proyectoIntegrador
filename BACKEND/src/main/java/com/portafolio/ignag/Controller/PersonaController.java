@@ -18,7 +18,7 @@ import com.portafolio.ignag.Dto.dtoPersona;
 
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="https://frontendignag.web.app")
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
 

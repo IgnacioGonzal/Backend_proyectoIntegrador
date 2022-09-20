@@ -23,7 +23,7 @@ import com.portafolio.ignag.Service.SProyectos;
 
 @RestController
 @RequestMapping("proyectos")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://frontendignag.web.app")
 public class CProyectos {
     @Autowired
     SProyectos sProyectos;
